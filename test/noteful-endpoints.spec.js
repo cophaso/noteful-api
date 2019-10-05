@@ -2,6 +2,7 @@ const { expect } = require('chai');
 const knex = require('knex');
 const app = require('../src/app');
 const { makeFoldersArray } = require('./folder.fixtures');
+const { makeNotesArray } = require('')
 
 describe('Noteful Endpoints', function() {
   let db;
@@ -91,7 +92,7 @@ describe('Noteful Endpoints', function() {
     })
   })
 
-  describe(`PATCH /api/articles/:article_id`, () => { 
+  describe(`PATCH /api/folders/:folder_id`, () => { 
     context('Given there are folders in the database', () => {
       const testFolders = makeFoldersArray()
 
